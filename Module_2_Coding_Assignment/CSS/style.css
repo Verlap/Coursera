@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat";
+  scroll-behavior: smooth;
+}
+
+header {
+  text-align: center;
+  font-size: 28px;
+}
+
+main {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.content {
+  border: 3px solid #153a50;
+  background-color: #a8b7cd;
+}
+
+.content .header {
+  display: flex;
+  justify-content: end;
+}
+
+.content .header h2 {
+  border: solid #153a50;
+  border-width: 0 0 3px 3px;
+  width: min-content;
+  padding: 4px 2rem;
+}
+
+.content .body {
+  padding: 6px 1rem;
+}
+
+.content .body p {
+  font-size: 28px;
+}
+
+.chicken {
+  background-color: #d08644;
+}
+.beef {
+  background-color: #b03d1b;
+}
+.sushi {
+  background-color: #f3b9cc;
+}
+
+/* Media query para ajustar a 100% si solo hay un elemento en la fila */
+@media (max-width: 767px) {
+  .content {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .content {
+    width: 49.3%;
+  }
+
+  .content:nth-child(3) {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    flex-wrap: nowrap;
+  }
+}
